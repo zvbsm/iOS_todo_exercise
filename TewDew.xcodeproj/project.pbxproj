@@ -14,9 +14,13 @@
 		869D280F2231F5F500A900E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 869D280D2231F5F500A900E8 /* LaunchScreen.storyboard */; };
 		869D281E2236E8E300A900E8 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 869D281C2236E8E300A900E8 /* DataModel.xcdatamodeld */; };
 		869D28412237113000A900E8 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869D28402237113000A900E8 /* CategoryTableViewController.swift */; };
+		DDC7BED2C7C48CB026627B8E /* libPods-TewDew.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB996B6E8615FBBAA997D57 /* libPods-TewDew.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		39BFC13A6CF73CEFEBBD0772 /* Pods-TewDew.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TewDew.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TewDew/Pods-TewDew.debug.xcconfig"; sourceTree = "<group>"; };
+		7AB996B6E8615FBBAA997D57 /* libPods-TewDew.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TewDew.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84B2B76F0B681F174739A518 /* Pods-TewDew.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TewDew.release.xcconfig"; path = "Pods/Target Support Files/Pods-TewDew/Pods-TewDew.release.xcconfig"; sourceTree = "<group>"; };
 		869D28012231F5F400A900E8 /* TewDew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TewDew.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		869D28042231F5F400A900E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		869D28062231F5F400A900E8 /* TewDewListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TewDewListViewController.swift; sourceTree = "<group>"; };
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDC7BED2C7C48CB026627B8E /* libPods-TewDew.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D7423C4FE70405064B1B080 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				39BFC13A6CF73CEFEBBD0772 /* Pods-TewDew.debug.xcconfig */,
+				84B2B76F0B681F174739A518 /* Pods-TewDew.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4CFDB936ADD82231F5D61206 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7AB996B6E8615FBBAA997D57 /* libPods-TewDew.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		869D27F82231F5F400A900E8 = {
 			isa = PBXGroup;
 			children = (
 				869D28032231F5F400A900E8 /* TewDew */,
 				869D28022231F5F400A900E8 /* Products */,
+				1D7423C4FE70405064B1B080 /* Pods */,
+				4CFDB936ADD82231F5D61206 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +133,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 869D28132231F5F500A900E8 /* Build configuration list for PBXNativeTarget "TewDew" */;
 			buildPhases = (
+				8A1E84191D057305F8216258 /* [CP] Check Pods Manifest.lock */,
 				869D27FD2231F5F400A900E8 /* Sources */,
 				869D27FE2231F5F400A900E8 /* Frameworks */,
 				869D27FF2231F5F400A900E8 /* Resources */,
@@ -167,6 +192,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8A1E84191D057305F8216258 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TewDew-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		869D27FD2231F5F400A900E8 /* Sources */ = {
@@ -320,6 +370,7 @@
 		};
 		869D28142231F5F500A900E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39BFC13A6CF73CEFEBBD0772 /* Pods-TewDew.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -338,6 +389,7 @@
 		};
 		869D28152231F5F500A900E8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84B2B76F0B681F174739A518 /* Pods-TewDew.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
